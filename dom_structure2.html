@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script type="text/javascript">
+      var link = document.querySelector('a');
+      link.textContent = 'Mozilla Developer Network';
+      link.href = 'https://developer.mozilla.org';
+
+      var sect = document.querySelector('section'); //assign a variable to <section>
+      var para = document.createElement('p'); //create a new <p> element and assign it to a variable
+      var para2= document.createElement('p'); // creating a second <p> element
+
+      para.textContent = 'We hope you enjoyed the ride.'; //add text to the new <p>
+      para2.textContent = 'Dinosaurs are cool'; //adding text to second <p>
+
+      sect.appendChild(para); //place the new paragraph in the <section>
+      sect.appendChild(para2); //putting new paragraph (para2) in <section>
+var p = para.style;
+var p2= para2.style;
+
+p.color = 'red';
+p.backgroundColor = 'yellow';
+p.padding = '10px';
+p.width = '250px';
+p.textAlign = 'center';
+
+p2.color= 'pink';
+p2.backgroundColor= 'purple';
+p2.width= '100 px';
+p2.padding = '30px';
+p2.textAlign= 'left';
+
+</script>
+  </body>
+</html>
